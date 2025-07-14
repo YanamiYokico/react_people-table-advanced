@@ -8,7 +8,7 @@ export const PeopleFilters = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
   const selectedSex = searchParams.get('sex') || '';
-  const selectedCenturies = searchParams.getAll('centuries') || '';
+  const selectedCenturies = searchParams.getAll('centuries') || [];
 
   const handleUpdate = (paramsToUpdate: SearchParams) => {
     const newSearch = getSearchWith(searchParams, paramsToUpdate);
