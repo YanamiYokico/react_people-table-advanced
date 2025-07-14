@@ -16,11 +16,11 @@ export const CenturyFilter: React.FC<Props> = ({
   const isSelected = (century: string) => selectedCenturies.includes(century);
 
   const toggleCentury = (century: string) => {
-    const newCenturies = isSelected(century)
+    const Centuries = isSelected(century)
       ? selectedCenturies.filter(c => c !== century)
       : [...selectedCenturies, century];
 
-    onUpdate({ centuries: newCenturies.length ? newCenturies : null });
+    onUpdate({ centuries: Centuries.length ? Centuries : null });
   };
 
   const handleClear = () => {
